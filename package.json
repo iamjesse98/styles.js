@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha --require babelhook test"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  }
+}
