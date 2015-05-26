@@ -36,3 +36,14 @@ export function generateCSS(obj) {
     return `${hyphenize(key)}: ${obj[key]};`;
   }).join('\n');
 }
+
+export function fill(strToRepeat, count) {
+  return Array(count + 1).join(strToRepeat);
+}
+
+export function indent(string, amount = 2) {
+  const lines = string.split('\n');
+  const fillerString = fill(' ', amount);
+  const joined = lines.map(line => `${fillerString}${line}`).join('\n');
+  return `${fillerString}${joined.trim()}`;
+}
