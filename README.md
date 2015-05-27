@@ -29,7 +29,7 @@ var myBoxStyles = createStyles({
     padding: '10px',
     color: 'red'
   }
-});
+}, 'My App Name');
 
 var div = document.createElement('div');
 
