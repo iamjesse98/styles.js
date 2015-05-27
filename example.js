@@ -12,4 +12,6 @@ const css = createStyles({
   }
 }, 'some-app');
 
-// console.log(css);
+const domElement = document.createElement('div');
+
+domElement.setAttribute('class', css.someClass);

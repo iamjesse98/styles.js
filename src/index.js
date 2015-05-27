@@ -56,12 +56,28 @@ const _create = (function () {
       .generateUniqueClassnames(obj, hyphenize(appName));
     const css = generateCSS(obj, classNames);
 
-    console.log(css);
+    if (
+      typeof HTMLDocument !== 'undefined' &&
+      typeof document !== 'undefined' &&
+      document instanceof HTMLDocument) {
+      
+      const style = document.createElement('style');
+
+      document.findElementsByTagName('head')[0].appendChild(style);
+      style.innerHTML = css;
+    } else {
+      console.log(css);
+    }
     return classNames;
   }
 }());
 
 /**
+ * Given the object that declares our CSS, dynamically generate a set of class
+ * names, associate them with their originally intended class names.
+ *
+ * Also generate the CSS code, and inject it into the DOM.
+ *
  * @param {Object} obj
  * @param {String} appName
  * @return {Object}
