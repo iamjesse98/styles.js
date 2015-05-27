@@ -92,7 +92,7 @@ var _create = (function () {
 
       var style = document.createElement('style');
 
-      document.findElementsByTagName('head')[0].appendChild(style);
+      document.getElementsByTagName('head')[0].appendChild(style);
       style.innerHTML = css;
     } else {
       console.log(css);
