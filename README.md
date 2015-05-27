@@ -38,4 +38,4 @@ div.setAttribute('class', myBoxStyles.box);
 
 ## License
 
-`styles.js` is [MIT-Licensed]()
+`styles.js` is [MIT-Licensed](https://github.com/shovon/styles.js/blob/master/LICENSE)
